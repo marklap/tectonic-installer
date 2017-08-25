@@ -290,12 +290,12 @@ Note: This field MUST be set manually prior to creating the cluster.
 EOF
 }
 
-variable "tectonic_admin_password_hash" {
+variable "tectonic_admin_password" {
   type = "string"
 
   description = <<EOF
-The bcrypt hash of admin user password to login to the Tectonic Console.
-Use the bcrypt-hash tool (https://github.com/coreos/bcrypt-tool/releases/tag/v1.0.0) to generate it.
+The admin user password to login to the Tectonic Console. Backslashes and double quotes should
+be escaped.
 
 Note: This field MUST be set manually prior to creating the cluster.
 EOF

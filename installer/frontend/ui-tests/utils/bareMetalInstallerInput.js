@@ -9,7 +9,7 @@ const json = bareMetalTestDataJson.variables;
 
 /** Returns expected json. This json is used to prep the data required for the test */
 const buildExpectedJson = () => {
-  delete json.tectonic_admin_password_hash;
+  delete json.tectonic_admin_password;
   return json;
 };
 

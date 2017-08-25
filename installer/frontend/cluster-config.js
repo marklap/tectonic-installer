@@ -1,10 +1,7 @@
 import _ from 'lodash';
-import bcrypt from 'bcryptjs';
 
 import { BARE_METAL_TF } from './platforms';
 import { keyToAlg, toExtraData } from './utils';
-
-const bcryptCost = 12;
 
 // TODO: (ggreer) clean up key names. Warning: Doing this will break progress files.
 export const AWS_ACCESS_KEY_ID = 'awsAccessKeyId';
@@ -235,7 +232,7 @@ export const toAWS_TF = (cc, FORMS, opts = {}) => {
     },
     variables: {
       // eslint-disable-next-line no-sync
-      tectonic_admin_password_hash: bcrypt.hashSync(cc[ADMIN_PASSWORD], opts.salt || bcrypt.genSaltSync(bcryptCost)),
+      tectonic_admin_password: cc[ADMIN_PASSWORD],
       tectonic_aws_region: cc[AWS_REGION],
       tectonic_admin_email: cc[ADMIN_EMAIL],
       tectonic_aws_master_ec2_type: controllers[INSTANCE_TYPE],
@@ -314,7 +311,7 @@ export const toBaremetal_TF = (cc, FORMS, opts = {}) => {
     retry: cc[RETRY],
     variables: {
       // eslint-disable-next-line no-sync
-      tectonic_admin_password_hash: bcrypt.hashSync(cc[ADMIN_PASSWORD], opts.salt || bcrypt.genSaltSync(bcryptCost)),
+      tectonic_admin_password: cc[ADMIN_PASSWORD],
       tectonic_cluster_name: cc[CLUSTER_NAME],
       tectonic_admin_email: cc[ADMIN_EMAIL],
       tectonic_metal_cl_version: cc[BM_OS_TO_USE],

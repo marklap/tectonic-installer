@@ -40,7 +40,7 @@ const getTerraformTfvars = (response, callback) => {
 const returnRequiredTerraformTfvars = (terraformTfvars) => {
   const json = JSON.parse(terraformTfvars);
   const extraTfvars = [
-    'tectonic_admin_password_hash',
+    'tectonic_admin_password',
     'tectonic_license_path',
     'tectonic_pull_secret_path',
     'tectonic_kube_apiserver_service_ip',

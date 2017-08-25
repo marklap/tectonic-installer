@@ -6,11 +6,11 @@
 // Note: This field MUST be set manually prior to creating the cluster.
 tectonic_admin_email = ""
 
-// The bcrypt hash of admin user password to login to the Tectonic Console.
-// Use the bcrypt-hash tool (https://github.com/coreos/bcrypt-tool/releases/tag/v1.0.0) to generate it.
+// The admin user password to login to the Tectonic Console.
+// Backslashes and double quotes should be escaped.
 // 
 // Note: This field MUST be set manually prior to creating the cluster.
-tectonic_admin_password_hash = ""
+tectonic_admin_password = ""
 
 // The base DNS domain of the cluster. It must NOT contain a trailing period. Some
 // DNS providers will automatically add this if necessary.

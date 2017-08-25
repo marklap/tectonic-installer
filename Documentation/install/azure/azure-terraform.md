@@ -157,7 +157,7 @@ Edit the parameters in `build/$CLUSTER/terraform.tfvars` with the deployment's A
 These are the basic values that must be adjusted for each Tectonic deployment on Azure. See the details of each value in the `terraform.tfvars` file.
 
 * `tectonic_admin_email` - For the initial Console login
-* `tectonic_admin_password_hash` - Bcrypted value
+* `tectonic_admin_password` - Password for the initial Console login
 * `tectonic_azure_client_secret` - As in `ARM_CLIENT_SECRET` above
 * `tectonic_azure_ssh_key` - Full path the the public key part of the key added to `ssh-agent` above
 * `tectonic_base_domain` - The DNS domain or subdomain delegated to an Azure DNS zone above
@@ -264,7 +264,6 @@ See the [installer troubleshooting][troubleshooting] document for known problem 
 [azure-cli]: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 [azure-dns]: https://docs.microsoft.com/en-us/azure/dns/dns-overview
 [azure-vars]: ../../variables/azure.md
-[bcrypt]: https://github.com/coreos/bcrypt-tool/releases/tag/v1.0.0
 [conventions]: ../../conventions.md
 [copy-docs]: https://www.terraform.io/docs/commands/apply.html
 [domain-delegation]: https://docs.microsoft.com/en-us/azure/dns/dns-delegate-domain-azure-dns

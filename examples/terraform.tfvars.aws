@@ -6,8 +6,8 @@
 // Note: This field MUST be set manually prior to creating the cluster.
 tectonic_admin_email = ""
 
-// The admin user password to login to the Tectonic Console.
-// Backslashes and double quotes should be escaped.
+// The admin user password to login to the Tectonic Console. Backslashes and double quotes should
+// be escaped.
 // 
 // Note: This field MUST be set manually prior to creating the cluster.
 tectonic_admin_password = ""
